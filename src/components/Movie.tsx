@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 import classes from "./Movie.module.css";
 export interface IMovie {
-  id: number;
+  id: string;
   title: string;
   releaseDate: String;
   openingText: string;

@@ -2,10 +2,9 @@ import React, { FC } from "react";
 
 import Movie from "./Movie";
 import classes from "./MoviesList.module.css";
-
 import { IMovie } from "./Movie";
 interface IMovieListProps {
-  movies: IMovie[];
+  movies: Array<IMovie>;
 }
 
 const MovieList: FC<IMovieListProps> = ({ movies }) => {
@@ -13,6 +12,7 @@ const MovieList: FC<IMovieListProps> = ({ movies }) => {
     <ul className={classes["movies-list"]}>
       {movies.map((movie: IMovie) => (
         <Movie
+          key={movie.id}
           id={movie.id}
           title={movie.title}
           releaseDate={movie.releaseDate}
